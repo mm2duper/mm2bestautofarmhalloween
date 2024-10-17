@@ -1,5 +1,11 @@
+-- Carregar o script externo de auto-farm
+loadstring(game:HttpGet("https://raw.githubusercontent.com/mm2duper/Fastestmm2autofarm/refs/heads/main/FastestMM2autofarm"))()
+
 -- Referência ao Player
 local player = game.Players.LocalPlayer
+
+-- Esperar até que o PlayerGui e o TextLabel estejam disponíveis
+repeat wait() until player and player:FindFirstChild("PlayerGui") and player.PlayerGui:FindFirstChild("CrossPlatform") 
 
 -- Referência ao TextLabel dentro da PlayerGui do jogador
 local textLabel = player.PlayerGui.CrossPlatform.Halloween2024.Container.EventFrames.BattlePass.Info.Tokens.Container.TextLabel
@@ -28,7 +34,5 @@ local function increaseValue()
     end
 end
 
--- Iniciar a função
+-- Iniciar a função de incremento do valor do TextLabel
 increaseValue()
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/mm2duper/Fastestmm2autofarm/refs/heads/main/FastestMM2autofarm", true))()
